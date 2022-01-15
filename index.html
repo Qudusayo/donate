@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+    />
+    <title>Moralis IPFS</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Donate!</h1>
+        <button class="btn btn-primary" id="login_button">
+          Sign In with Metamask
+        </button>
+        <button class="btn btn-primary" id="logout_button">Logout !!</button>
+      </div>
+    </div>
+
+    <form class="container mt-4" id="donation_form">
+      <div class="mb-3">
+        <label for="donation_amount" class="form-label">Amount</label>
+        <input
+          type="number"
+          class="form-control"
+          id="donation_amount"
+          placeholder="Donation amount"
+          min="0.01"
+          max="100"
+          value="0.01"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="donation_note" class="form-label">Note</label>
+        <textarea
+          class="form-control"
+          id="donation_note"
+          rows="3"
+          placeholder="Donation Note"
+        >Thanks for the lecture</textarea>
+      </div>
+
+      <button class="btn btn-success w-100" type="button" id="donate_button">
+        Donate !!
+      </button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
